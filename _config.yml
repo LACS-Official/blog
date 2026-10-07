@@ -1,0 +1,104 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+##########################################
+# 站点基本信息配置
+##########################################
+# Site
+title: 领创博客 数码科技分享  # 网站标题，显示在浏览器标签和网站头部
+subtitle: '领创博客,LACS Blog'      # 网站副标题（当前为空）
+description: '分享刷机玩机心得，分享各种游戏攻略，分享各种生活琐事。'  # 网站描述，用于SEO
+keywords: '领创, 领创博客, 刷机, 玩机, 攻略, 生活'  # 网站关键词，用于SEO优化
+author: '领创工作室'  # 网站作者/所有者
+language: zh-CN    # 网站语言设置（简体中文）
+timezone: ''       # 时区设置，留空默认使用服务器时区
+
+##########################################
+# 网址链接配置
+##########################################
+# URL
+## 永久链接格式配置
+url: https://xn--9krq6q.xn--5brr03o.top/ # 网站主域名（需要替换为实际域名）
+permalink: /p/:title/  # 文章永久链接格式（年/月/日/标题）
+pretty_urls:
+  trailing_index: false  # 是否在链接末尾保留index.html
+  trailing_html: false   # 是否在链接末尾保留.html后缀
+
+##########################################
+# 目录结构配置
+##########################################
+# Directory
+source_dir: source    # 源文件目录（存放Markdown等原始内容）
+public_dir: public    # 输出目录（生成的静态文件目录）
+tag_dir: tags         # 标签页面目录
+archive_dir: archives # 归档页面目录
+category_dir: categories  # 分类页面目录
+
+##########################################
+# 内容写作配置
+##########################################
+# Writing
+new_post_name: :title.md  # 新文章文件名格式（使用标题作为文件名）
+default_layout: post      # 默认文章模板类型
+external_link:
+  enable: true  # 是否自动在新建标签页打开外部链接
+post_asset_folder: false  # 是否启用文章资源文件夹
+
+##########################################
+# 首页生成配置
+##########################################
+# Home page setting
+index_generator:
+  per_page: 10     # 首页每页显示文章数量
+  order_by: -date  # 文章排序规则（按日期倒序）
+
+##########################################
+# 分类与标签配置
+##########################################
+# Category & Tag
+default_category: uncategorized  # 默认分类名称（当未指定分类时使用）
+
+##########################################
+# 时间格式配置
+##########################################
+# Date / Time format
+date_format: YYYY-MM-DD  # 日期显示格式
+time_format: HH:mm:ss    # 时间显示格式
+
+##########################################
+# 主题配置
+##########################################
+# Extensions
+theme: anzhiyu  # 当前使用的主题名称
+
+##########################################
+# 部署配置（需要补充具体部署参数）
+##########################################
+# Deployment
+deploy:
+- type: git
+  repo: git@github.com:LACS-Official/blog.git
+  branch: master
+
+
+sitemap:
+  path:
+    - sitemap.xml
+    - sitemap.txt
+  template: # ./sitemap_template.xml
+  template_txt: # ./sitemap_template.txt
+  rel: false
+  tags: true
+  categories: true
+
+# Security
+#encrypt: # hexo-blog-encrypt
+#  abstract: 有东西被加密了, 请输入密码查看.
+#  message: 您好, 这里需要密码.
+#  tags:
+#    - {name: tagName, password: 密码A}
+#    - {name: tagName, password: 密码B}
+#  theme: up
+#  wrong_pass_message: 抱歉, 这个密码看着不太对, 请再试试.
+#  wrong_hash_message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.

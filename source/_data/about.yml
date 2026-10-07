@@ -1,0 +1,98 @@
+- class_name: 关于页
+  subtitle: 引领创新，无限进步
+  avatarImg: https://gitee.com/lacsgf/img/raw/master/avatar.webp
+  avatarSkills:
+    left:
+      - 🤖️ 数码科技爱好者
+      - 🔍 分享与热心帮助
+      - 🔨 设计开发一条龙
+    right:
+      - 专修交互与设计 🤝
+      - 脚踏实地行动派 🏃
+  name: 领创工作室
+  description: 是一名 学生、独立开发者、博主
+  aboutsiteTips:
+    tips: 追求
+    title1: 源于
+    title2: 热爱而去 感受
+    word:
+      - 学习
+      - 生活
+      - 程序
+      - 开发
+  helloAbout: Lead And Create Studio
+  skillsTips:
+    tips: 技能
+    title: 开启创造力
+    list:
+  careers:
+    tips: 生涯
+    title: 无限进步
+    list:
+      - desc: EDU,软件工程专业
+        color: "#357ef5"
+    img: https://bu.dusays.com/2023/04/21/644287166329b.png
+  statistic:
+    link: /archives
+    text: 文章隧道
+    cover: https://bu.dusays.com/2023/05/01/644f4b037b930.jpg
+  map:
+    title: 我现在住在
+    StrengthenTitle: 中国，铁岭市
+    background: https://bu.dusays.com/2023/07/05/64a4c61cb20ef.jpg
+    backgroundDark: https://bu.dusays.com/2023/07/05/64a4c63495ac5.jpg
+  selfInfo:
+    selfInfoTips1: 生于
+    selfInfoContentYear: 2006
+    selfInfoTips2: 专业
+    selfInfoContent2: 软件工程
+    selfInfoTips3: 现在职业
+    selfInfoContent3: 大一学生👨‍🎓
+  personalities:
+    author_name: 建筑师
+    personality_type: INTJ
+    photo_url: https://gitee.com/lacsgf/img/raw/master/透底黑字t.webp
+    personality_img:
+    name_url: https://www.16personalities.com/ch/intj-%E4%BA%BA%E6%A0%BC
+  maxim:
+    maxim_tips: 座右铭
+    maxim_top: 永远相信
+    maxim_bottom: 美好的事情即将发生
+  buff:
+    buff_tips:
+    buff_top:
+    buff_bottom:
+  game:
+    game_tips: 爱好游戏
+    game_title: 钢铁雄心4
+    game_uid:
+    game_bg:
+  comic:
+    comic_tips: 喜欢看
+    comic_title:
+    comic_list:
+      - name: 活着
+        href: https://movie.douban.com/subject/1292365/?dt_from=movie_navigation
+        cover: https://gitee.com/lacsgf/img/raw/master/20250221230910325.webp
+      - name: 落叶归根
+        href: https://movie.douban.com/subject/1853621/
+        cover: https://gitee.com/lacsgf/img/raw/master/20250221231127671.webp
+      - name: 白日梦想家
+        href: https://movie.douban.com/subject/2133323/
+        cover: https://gitee.com/lacsgf/img/raw/master/20250221231351010.webp
+      - name: 让子弹飞
+        href: https://movie.douban.com/subject/3742360/
+        cover: https://gitee.com/lacsgf/img/raw/master/20250221231451181.webp
+      - name: 高山下的花环
+        href: https://movie.douban.com/subject/1422283/
+        cover: https://gitee.com/lacsgf/img/raw/master/20250221231636635.webp
+  like:
+    like_tips: 关注偏好
+    like_title: 数码科技
+    like_bg: https://bu.dusays.com/2022/12/06/638f5f05ce1f7.jpg
+    like_bottom: 手机、电脑软硬件
+  music:
+    music_tips: 音乐偏好
+    music_title: Phonk、民谣、华语流行,古风
+    music_bg: https://gitee.com/lacsgf/img/raw/master/20241210m7963n.webp
+    music_link: /music
