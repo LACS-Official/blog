@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://博客.领创.top/categories/</loc>
+    
+    <lastmod>2026-10-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://博客.领创.top/about/</loc>
     
     <lastmod>2026-10-07</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://博客.领创.top/tags/</loc>
-    
-    <lastmod>2026-10-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://博客.领创.top/categories/</loc>
     
     <lastmod>2026-10-07</lastmod>
     
@@ -193,6 +193,13 @@
   </url>
   
   <url>
+    <loc>https://博客.领创.top/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://博客.领创.top/tags/root/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -201,13 +208,6 @@
   
   <url>
     <loc>https://博客.领创.top/tags/%E4%B8%80%E9%94%AEroot/</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://博客.领创.top/tags/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
