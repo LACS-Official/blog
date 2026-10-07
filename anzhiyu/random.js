@@ -1,4 +1,4 @@
-var posts=["/http-protocol-overview","/json/","/adb_fastboot/","/notion-example","/hyperos_unlocktool","/jmeter/","/loadrunner/","/xiaomi_usb/","/yijian_root","/p/test-pmfq4/","/ycsj/"];function toRandomPost(){
+var posts=["/json/","/http-protocol-overview","/notion-example","/adb_fastboot/","/jmeter/","/hyperos_unlocktool","/loadrunner/","/xiaomi_usb/","/yijian_root","/post/test-pmfq4.html","/ycsj/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };var friend_link_list=[];
     var refreshNum = 1;

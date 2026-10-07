@@ -5,10 +5,10 @@
     
     <entry>
       <title>测试</title>
-      <link href="//p/test-pmfq4/"/>
-      <url>//p/test-pmfq4/</url>
+      <link href="//post/test-pmfq4.html"/>
+      <url>//post/test-pmfq4.html</url>
       
-        <content type="html"><![CDATA[<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>测试</p><p>‍</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>测试</p><p>‍</p><p>‍</p>]]></content>
       
       
       <categories>
@@ -17,12 +17,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> 测试 </tag>
-            
-        </tags>
       
     </entry>
     
