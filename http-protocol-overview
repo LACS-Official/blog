@@ -1,0 +1,513 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>HTTP协议概述 | 领创博客 数码科技分享</title><meta name="keywords" content="http协议"><meta name="author" content="领创工作室"><meta name="copyright" content="领创工作室"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="HTTP协议概述"><meta name="application-name" content="HTTP协议概述"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="HTTP协议概述"><meta property="og:url" content="https://博客.领创.top/http-protocol-overview"><meta property="og:site_name" content="领创博客 数码科技分享"><meta property="og:description" content="WEB API接口 大都是基于 HTTP 协议的，所以，要进行接口测试 首先要了解 HTTP 协议 的 基础知识。 HTTP协议简介 HTTP 协议 全称是 超文本传输协议， 英文是 Hypertext Transfer Protocol 。  HTTP 有好几个版本，包括： 0.9 、 1.0 、"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://gitee.com/lacsgf/img/raw/master/avatar.webp"><meta property="article:author" content="领创工作室"><meta property="article:tag" content="领创, 领创博客, 刷机, 玩机, 攻略, 生活"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://gitee.com/lacsgf/img/raw/master/avatar.webp"><meta name="description" content="WEB API接口 大都是基于 HTTP 协议的，所以，要进行接口测试 首先要了解 HTTP 协议 的 基础知识。 HTTP协议简介 HTTP 协议 全称是 超文本传输协议， 英文是 Hypertext Transfer Protocol 。  HTTP 有好几个版本，包括： 0.9 、 1.0 、"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://博客.领创.top/http-protocol-overview"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="G-LR7FPHHFZQ"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="DDB6A0DB472D14167106B7221191BAEF"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"不要走开，快来看看吧！","backTitle":"欢迎回来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":2},
+  friends_vue_info: undefined,
+  navMusic: false,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 领创工作室","link":"链接: ","source":"来源: 领创博客 数码科技分享","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '领创博客 数码科技分享',
+  title: 'HTTP协议概述',
+  postAI: '',
+  pageFillDescription: 'HTTP协议简介, HTTP请求消息, 请求行 request line, 请求头 request headers, 消息体 message body, HTTP响应消息, 状态行（Status Line）, 响应头（Response Headers）, 消息体（Message Body）接口大都是基于协议的所以要进行接口测试首先要了解协议的基础知识协议简介协议全称是超文本传输协议英文是有好几个版本包括当前最广泛使用的是版本协议最大的特点是通讯双方分为客户端和服务端双方的信息交互必须是这样一种方式特别注意协议中服务端不能主动先发送信息给客户端客户端先发送请求给服务端然后服务端发送响应给客户端而且在以前的版本服务端返回响应给客户端后连接就会断开下一次双方要进行信息交流必须重复上面的过程重新建立连接客户端发送请求服务返回响应到了版本建立连接后这个连接可以保持一段时间这段时间双方可以多次进行请求和响应无需重新建立连接请求消息请求消息由下面几个部分组成请求行请求的第一行的内容表示要操作什么资源使用的协议版本是什么里面包含了部分信息请求的方法操作资源的地址协议的版本号例如是请求方法表示要获取资源资源的地址是使用的协议是常见的请求方法请求行里面还包括了比如表示要获取资源的具体路径特别要注意的是参数英文叫什么是参数比如问号后面的部分就是参数每个参数之间是用隔开的请求头请求头是请求行下面的的内容里面存放一些信息比如请求发送的服务端域名是什么希望接收的响应消息使用什么语言请求消息体的长度等等通常请求头都有好多个一个请求头占据一行单个请求头的格式是键值消息体请求的请求头中可以存放一些数据信息但是有些数据信息往往需要存放在消息体中特别是等请求添加修改的数据信息通常都是存放在请求消息体中的如果请求有消息体协议规定需要在消息头和消息体之间插入一个空行隔开它们请求消息体中保存了要提交给服务端的数据信息比如客户端要上传一个文件给服务端就可以通过请求发送文件数据给服务端文件的数据就应该在请求的消息体中再比如上面示例中客户端要添加药品药品的名称编码描述就存放在请求消息体中请求消息体通常是某种格式的文本常见的有响应消息下面是个响应消息的示例响应消息包含如下几个部分状态行状态行位于首行涵盖三个部分协议版本在上述示例中即为状态码在上述示例中即为请求成功常见状态码描述状态的短语在上述示例中即为表示请求成功以下是一些常见的状态行中描述状态的短语表示请求的资源未找到表明客户端发送的请求存在语法错误服务器内部发生错误未经授权需要用户进行身份验证表示客户端被禁止访问请求的资源表示请求发生冲突资源未被修改客户端可使用缓存版本请求方法不被允许服务不可用通常是服务器暂时过载或维护网关超时响应头响应头处于响应状态行下方的内容区域存储了部分信息其作用与格式和请求头类似消息体有时响应需要包含消息体同样若响应具有消息体依据协议规定需在消息头与消息体之间插入一个空行以将二者分隔开与请求消息体相同响应消息体通常也是某种格式的文本常见的有',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-02-24 10:19:00',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 8 || hour >= 22
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/custom/imgloaded/imgloaded.css?1"><link rel="stylesheet" href="/custom/bilibili/bilibili.css"><script async defer src="https://um.ruom.top/script.js" data-website-id="c19add88-59e1-4fa1-a406-09e64d2845f3"></script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.xn--5brr03o.top/" title="领创工作室官网"><img class="back-menu-item-icon" src="/img/favicon.ico" alt="领创工作室官网"/><span class="back-menu-item-text">领创工作室官网</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://xn--5nqs58m.xn--5brr03o.top/" title="软件资源网"><img class="back-menu-item-icon" src="/img/favicon.ico" alt="软件资源网"/><span class="back-menu-item-text">软件资源网</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://领创.top/MiDeviceCode" title="小米设备代号查询"><img class="back-menu-item-icon" src="/img/favicon.ico" alt="小米设备代号查询"/><span class="back-menu-item-text">小米设备代号查询</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">领创博客 数码科技分享</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/about/"><span> 关于</span></a></div></div></div><div id="nav-right"><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/adb/" style="font-size: 1.05rem; color: rgb(40, 5, 26);">adb<sup>1</sup></a><a href="/tags/bl%E9%94%81/" style="font-size: 1.05rem; color: rgb(108, 64, 109);">bl锁<sup>1</sup></a><a href="/tags/fastboot/" style="font-size: 1.05rem; color: rgb(42, 121, 195);">fastboot<sup>1</sup></a><a href="/tags/http%E5%8D%8F%E8%AE%AE/" style="font-size: 1.05rem; color: rgb(24, 105, 104);">http协议<sup>1</sup></a><a href="/tags/hyperos/" style="font-size: 1.05rem; color: rgb(78, 163, 53);">hyperos<sup>1</sup></a><a href="/tags/json/" style="font-size: 1.05rem; color: rgb(113, 153, 148);">json<sup>1</sup></a><a href="/tags/root/" style="font-size: 1.05rem; color: rgb(59, 56, 93);">root<sup>1</sup></a><a href="/tags/%E4%B8%80%E9%94%AEroot/" style="font-size: 1.05rem; color: rgb(2, 100, 72);">一键root<sup>1</sup></a><a href="/tags/%E5%B0%8F%E7%B1%B3/" style="font-size: 1.05rem; color: rgb(147, 35, 167);">小米<sup>1</sup></a><a href="/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/" style="font-size: 1.05rem; color: rgb(158, 71, 11);">性能测试<sup>2</sup></a><a href="/tags/%E8%BF%9C%E7%A8%8B%E5%88%B7%E6%9C%BA/" style="font-size: 1.05rem; color: rgb(177, 51, 30);">远程刷机<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/02/"><span class="card-archive-list-date">二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C%E4%BA%A4%E4%BA%92/" itemprop="url">网络交互</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/http%E5%8D%8F%E8%AE%AE/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>http协议</span></a></span></div></div><h1 class="post-title" itemprop="name headline">HTTP协议概述</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-02-24T00:00:00.000Z" title="发表于 2025-02-24 00:00:00">2025-02-24</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-02-24T10:19:00.000Z" title="更新于 2025-02-24 10:19:00">2025-02-24</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">1.4k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="HTTP协议概述"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src=""></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://博客.领创.top/http-protocol-overview"><header><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C%E4%BA%A4%E4%BA%92/" itemprop="url">网络交互</a><a href="/tags/http%E5%8D%8F%E8%AE%AE/" tabindex="-1" itemprop="url">http协议</a><h1 id="CrawlerTitle" itemprop="name headline">HTTP协议概述</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">领创工作室</span><time itemprop="dateCreated datePublished" datetime="2025-02-24T00:00:00.000Z" title="发表于 2025-02-24 00:00:00">2025-02-24</time><time itemprop="dateCreated datePublished" datetime="2025-02-24T10:19:00.000Z" title="更新于 2025-02-24 10:19:00">2025-02-24</time></header><p>WEB API接口 大都是基于 HTTP 协议的，所以，要进行接口测试 首先要了解 HTTP 协议 的 基础知识。</p>
+<h1 id="HTTP协议简介"><a href="#HTTP协议简介" class="headerlink" title="HTTP协议简介"></a>HTTP协议简介</h1><ul>
+<li><p>HTTP 协议 全称是 超文本传输协议， 英文是 Hypertext Transfer Protocol 。</p>
+</li>
+<li><p>HTTP 有好几个版本，包括： <code>0.9</code> 、 <code>1.0</code> 、 <code>1.1</code> 、 <code>2</code> 、 <code>3</code> ，当前最广泛使用的是 <code>HTTP/1.1</code> 版本。</p>
+</li>
+<li><p>HTTP 协议最大的特点是 通讯双方 分为 <code>客户端</code> 和 <code>服务端</code> 。</p>
+</li>
+<li><p>HTTP 双方的信息交互，必须是这样一种方式：</p>
+<p>  特别注意：HTTP协议中，服务端不能主动先发送信息给 客户端。</p>
+<ul>
+<li>客户端 先发送 http请求（request）给 服务端</li>
+<li>然后服务端 发送 http响应（response）给 客户端</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>而且在1.1 以前的版本， 服务端 返回响应给客户端后，连接就会 断开 ，下一次双方要进行信息交流，必须重复上面的过程，重新建立连接，客户端发送请求，服务返回响应。<br>到了 1.1 版本， 建立连接后，这个连接可以保持一段时间（keep alive）， 这段时间，双方可以多次进行 请求和响应， 无需重新建立连接。</p>
+</blockquote>
+<hr>
+<h1 id="HTTP请求消息"><a href="#HTTP请求消息" class="headerlink" title="HTTP请求消息"></a>HTTP请求消息</h1><figure class="highlight plaintext"><figcaption><span>text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">GET http://192.168.56.101:8080/suthr/logon?username=hrteacher&amp;password=12345  HTTP/1.1</span><br><span class="line">User-Agent: &quot;PostmanRuntime/7.43.0&quot;</span><br><span class="line">Accept:&quot;*/*</span><br><span class="line">Cache-Control:&quot;no-cache&#x27;</span><br><span class="line">Postman-Token: &quot;0e9a9ecc-2701-4c93-9f5b-c302765bd409&quot;</span><br><span class="line">Host: &quot;192.168.56.101:8080&#x27;</span><br><span class="line">Accept-Encoding: &quot;gzip, deflate, br&quot;</span><br><span class="line">Connection: &quot;keep-alive&quot;</span><br></pre></td></tr></table></figure>
+
+
+<p>http请求消息由下面几个部分组成</p>
+<h2 id="请求行-request-line"><a href="#请求行-request-line" class="headerlink" title="请求行 request line"></a>请求行 request line</h2><ul>
+<li><p>http请求的第一行的内容，表示要操作什么资源，使用的 http协议版本是什么。</p>
+<p>  里面包含了3部分信息： 请求的方法，操作资源的地址， 协议的版本号</p>
+<p>  例如</p>
+  <figure class="highlight plaintext"><figcaption><span>text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET http://192.168.56.101:8080/suthr/logon HTTP/1.1</span><br></pre></td></tr></table></figure>
+
+
+<p>  Get是请求方法，表示要 <code>获取</code> 资源；资源的 <code>地址</code> 是 <code>/mgr/login.html</code> ； 使用的 <code>协议</code> 是 <code>HTTP/1.1</code></p>
+<p>  <a href="HTTP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0+69c40bda-b3b3-4e8e-bb13-935987e4c0bc/%E5%B8%B8%E8%A7%81%E7%9A%84HTTP+%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95+74e2e110-5961-41b1-a8b4-a33845eaa0d8.md">常见的HTTP 请求方法</a></p>
+</li>
+<li><p>请求行里面还包括了url，比如</p>
+  <figure class="highlight plaintext"><figcaption><span>text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/suthr/logon?username=hrteacher&amp;password=123456</span><br></pre></td></tr></table></figure>
+
+
+<p>  url表示要获取资源的具体路径</p>
+<p>  url特别要注意的是 <code>url参数</code> ，英文叫 <code>url query String</code></p>
+<p>  什么是url参数？</p>
+<p>  比如：</p>
+  <figure class="highlight plaintext"><figcaption><span>text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET http://192.168.56.101:8080/suthr/logon?username=hrteacher&amp;password=123456</span><br></pre></td></tr></table></figure>
+
+
+<p>  问号后面的部分 <code>username=hrteacher&amp;password=123456</code> 就是 url 参数，</p>
+<p>  每个参数之间是用 <code>&amp;</code> 隔开的。</p>
+</li>
+</ul>
+<h2 id="请求头-request-headers"><a href="#请求头-request-headers" class="headerlink" title="请求头 request headers"></a>请求头 request headers</h2><ul>
+<li><p>请求头是http请求行下面的的内容，里面存放一些 信息。</p>
+<p>  比如，请求发送的服务端域名是什么， 希望接收的响应消息使用什么语言，请求消息体的长度等等。</p>
+<p>  通常请求头 都有好多个，一个请求头 占据一行</p>
+<p>  单个请求头的 格式是： <code>key（键）: value（值）</code></p>
+</li>
+</ul>
+<h2 id="消息体-message-body"><a href="#消息体-message-body" class="headerlink" title="消息体 message body"></a>消息体 message body</h2><ul>
+<li><p>请求的url、请求头中可以存放一些数据信息， 但是有些数据信息，往往需要存放在消息体中。</p>
+<p>  特别是 POST、PUT等请求，添加、修改的数据信息 通常都是 存放在 请求消息体 中的。</p>
+<p>  如果 HTTP 请求 有 消息体， 协议规定 需要在 消息头和消息体之间 插入一个空行， 隔开 它们。</p>
+<p>  请求消息体中保存了要提交给服务端的数据信息。</p>
+<p>  比如：客户端要上传一个文件给服务端，就可以通过HTTP请求发送文件数据给服务端。</p>
+<p>  文件的数据 就应该在请求的消息体中。</p>
+<p>  再比如：上面示例中 客户端要添加药品，药品的名称、编码、描述，就存放在请求消息体中。</p>
+<p>  WEB API 请求消息体 通常是某种格式的文本，常见的有</p>
+<ul>
+<li>Json</li>
+<li>Xml</li>
+<li>www-form-urlencoded</li>
+</ul>
+</li>
+</ul>
+<h1 id="HTTP响应消息"><a href="#HTTP响应消息" class="headerlink" title="HTTP响应消息"></a>HTTP响应消息</h1><p>下面是1个http响应消息的示例</p>
+<figure class="highlight plaintext"><figcaption><span>text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Date:&quot;Sun, 09 Feb 2025 07:39:10 GMT&quot;</span><br><span class="line">Content-Length: 37</span><br><span class="line">X-Frame-Options: SAMEORIGIN</span><br><span class="line">Vary: Cookie</span><br><span class="line">Content-Type:: &quot;text/plain;charset=IS0-8859-1&quot;</span><br><span class="line">Keep-Alive:&quot;timeout=20&quot;</span><br><span class="line">Connection:&quot;keep-alive&quot;</span><br><span class="line">&#123;&quot;ret&quot;: 0, &quot;retlist&quot;: [], &quot;total&quot;: 0&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>HTTP响应消息包含如下几个部分</p>
+<h3 id="状态行（Status-Line）"><a href="#状态行（Status-Line）" class="headerlink" title="状态行（Status Line）"></a>状态行（Status Line）</h3><p>状态行位于首行，涵盖三个部分：</p>
+<ul>
+<li>协议版本</li>
+</ul>
+<p>在上述示例中，即为 <code>HTTP/1.1</code></p>
+<ul>
+<li>状态码</li>
+</ul>
+<p>在上述示例中，即为 <code>200</code>，请求成功</p>
+<p><a href="HTTP%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0+69c40bda-b3b3-4e8e-bb13-935987e4c0bc/%E5%B8%B8%E8%A7%81%E7%8A%B6%E6%80%81%E7%A0%81+cf487115-001d-4467-8056-4ce840b09f84.md">常见状态码</a></p>
+<ul>
+<li>描述状态的短语</li>
+</ul>
+<p>在上述示例中，即为 <code>OK</code>，表示请求成功</p>
+<ul>
+<li>以下是一些常见的 HTTP 状态行中描述状态的短语：<ol>
+<li><code>Not Found</code> ：表示请求的资源未找到。</li>
+<li><code>Bad Request</code> ：表明客户端发送的请求存在语法错误。</li>
+<li><code>Internal Server Error</code> ：服务器内部发生错误。</li>
+<li><code>Unauthorized</code> ：未经授权，需要用户进行身份验证。</li>
+<li><code>Forbidden</code> ：表示客户端被禁止访问请求的资源。</li>
+<li><code>Conflict</code> ：表示请求发生冲突。</li>
+<li><code>Not Modified</code> ：资源未被修改，客户端可使用缓存版本。</li>
+<li><code>Method Not Allowed</code> ：请求方法不被允许。</li>
+<li><code>Service Unavailable</code> ：服务不可用，通常是服务器暂时过载或维护。</li>
+<li><code>Gateway Timeout</code> ：网关超时。</li>
+</ol>
+</li>
+</ul>
+<h2 id="响应头（Response-Headers）"><a href="#响应头（Response-Headers）" class="headerlink" title="响应头（Response Headers）"></a>响应头（Response Headers）</h2><p>响应头处于响应状态行下方的内容区域，存储了部分信息。其作用与格式和请求头类似。</p>
+<h2 id="消息体（Message-Body）"><a href="#消息体（Message-Body）" class="headerlink" title="消息体（Message Body）"></a>消息体（Message Body）</h2><p>有时，HTTP 响应需要包含消息体。</p>
+<p>同样，若 HTTP 响应具有消息体，依据协议规定，需在消息头与消息体之间插入一个空行，以将二者分隔开。</p>
+<p>与请求消息体相同，WEB API 响应消息体通常也是某种格式的文本，常见的有：</p>
+<ul>
+<li>Json</li>
+<li>Xml</li>
+<li>www-form-urlencoded</li>
+<li></li>
+</ul>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.png&quot;" data-lazy-src="https://gitee.com/lacsgf/img/raw/master/avatar.webp" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.png&quot;" data-lazy-src="https://gitee.com/lacsgf/img/raw/master/avatar.webp" title="头像" alt="头像"></a><div class="post-copyright__author_name">领创工作室</div><div class="post-copyright__author_desc">领创博客,LACS Blog</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://博客.领创.top/http-protocol-overview">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://博客.领创.top/http-protocol-overview')">HTTP协议概述</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://博客.领创.top/http-protocol-overview"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=HTTP协议概述&amp;url=https://博客.领创.top/http-protocol-overview&amp;pic=" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://xn--9krq6q.xn--5brr03o.top" target="_blank">领创博客 数码科技分享</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/http%E5%8D%8F%E8%AE%AE/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>http协议<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://gitee.com/lacsgf/img/raw/master/avatar.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/yijian_root"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.png&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">一键root</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.png&quot;" data-lazy-src="https://gitee.com/lacsgf/img/raw/master/avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description">分享刷机玩机心得，分享各种游戏攻略，分享各种生活琐事。</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">领创工作室</h1><div class="author-info__desc">领创博客,LACS Blog</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/1779662818" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTTP%E5%8D%8F%E8%AE%AE%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">HTTP协议简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTTP%E8%AF%B7%E6%B1%82%E6%B6%88%E6%81%AF"><span class="toc-number">2.</span> <span class="toc-text">HTTP请求消息</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E8%A1%8C-request-line"><span class="toc-number">2.1.</span> <span class="toc-text">请求行 request line</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E5%A4%B4-request-headers"><span class="toc-number">2.2.</span> <span class="toc-text">请求头 request headers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E4%BD%93-message-body"><span class="toc-number">2.3.</span> <span class="toc-text">消息体 message body</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTTP%E5%93%8D%E5%BA%94%E6%B6%88%E6%81%AF"><span class="toc-number">3.</span> <span class="toc-text">HTTP响应消息</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E8%A1%8C%EF%BC%88Status-Line%EF%BC%89"><span class="toc-number">3.0.1.</span> <span class="toc-text">状态行（Status Line）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E5%A4%B4%EF%BC%88Response-Headers%EF%BC%89"><span class="toc-number">3.1.</span> <span class="toc-text">响应头（Response Headers）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E4%BD%93%EF%BC%88Message-Body%EF%BC%89"><span class="toc-number">3.2.</span> <span class="toc-text">消息体（Message Body）</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/http-protocol-overview" title="HTTP协议概述">HTTP协议概述</a><time datetime="2025-02-24T00:00:00.000Z" title="发表于 2025-02-24 00:00:00">2025-02-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/yijian_root" title="一键root">一键root</a><time datetime="2025-02-23T22:53:00.000Z" title="发表于 2025-02-23 22:53:00">2025-02-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/notion-example" title="Notion示例文章">Notion示例文章</a><time datetime="2025-02-23T21:14:00.000Z" title="发表于 2025-02-23 21:14:00">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/json/" title="JSON"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.png&quot;" data-lazy-src="https://gitee.com/lacsgf/img/raw/master/webp/20250223223955420.webp" onerror="this.onerror=null;this.src='/img/404.png'" alt="JSON"/></a><div class="content"><a class="title" href="/json/" title="JSON">JSON</a><time datetime="2025-02-23T00:00:00.000Z" title="发表于 2025-02-23 00:00:00">2025-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/adb_fastboot/" title="adb_fastboot"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.png&quot;" data-lazy-src="https://gitee.com/lacsgf/img/raw/master/OIP-C.S8kbDtSRUlR60KgcDAbJogHaDU" onerror="this.onerror=null;this.src='/img/404.png'" alt="adb_fastboot"/></a><div class="content"><a class="title" href="/adb_fastboot/" title="adb_fastboot">adb_fastboot</a><time datetime="2025-02-23T00:00:00.000Z" title="发表于 2025-02-23 00:00:00">2025-02-23</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><div id="runtimeTextTip"></div></div><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">导航</div><div class="footer-links"><a class="footer-item" title="领创工作室官网" target="_blank" rel="noopener" href="https://www.xn--5brr03o.top/">领创工作室官网</a><a class="footer-item" title="软件资源网" target="_blank" rel="noopener" href="https://xn--5nqs58m.xn--5brr03o.top/">软件资源网</a><a class="footer-item" title="澎湃OS绕答题解锁工具箱" target="_blank" rel="noopener" href="https://www.xn--5brr03o.top/hout">澎湃OS绕答题解锁工具箱</a></div></div><div class="footer-group"><div class="footer-title">协议</div><div class="footer-links"><a class="footer-item" title="隐私协议" href="/privacy/">隐私协议</a><a class="footer-item" title="Cookies" href="/cookies/">Cookies</a><a class="footer-item" title="版权协议" href="/copyright/">版权协议</a></div></div><div class="footer-group"><div class="footer-title-group"><div class="footer-title">友链</div><a class="random-friends-btn" id="footer-random-friends-btn" href="javascript:addFriendLinksInFooter();" title="换一批友情链接"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.png&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.png&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.png&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2024 - 2026 By <a class="footer-bar-link" href="/" title="领创工作室" target="_blank">领创工作室</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a><a class="footer-bar-link cc" href="/copyright" title="cc协议"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-by-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nc-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nd-line"></i></a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">5</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.xn--5brr03o.top/" title="领创工作室官网"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.png&quot;" data-lazy-src="/img/favicon.ico" alt="领创工作室官网"/><span class="back-menu-item-text">领创工作室官网</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://xn--5nqs58m.xn--5brr03o.top/" title="软件资源网"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.png&quot;" data-lazy-src="/img/favicon.ico" alt="软件资源网"/><span class="back-menu-item-text">软件资源网</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://领创.top/MiDeviceCode" title="小米设备代号查询"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.png&quot;" data-lazy-src="/img/favicon.ico" alt="小米设备代号查询"/><span class="back-menu-item-text">小米设备代号查询</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/about/"><span> 关于</span></a></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/adb/" style="font-size: 0.88rem;">adb<sup>1</sup></a><a href="/tags/bl%E9%94%81/" style="font-size: 0.88rem;">bl锁<sup>1</sup></a><a href="/tags/fastboot/" style="font-size: 0.88rem;">fastboot<sup>1</sup></a><a href="/tags/http%E5%8D%8F%E8%AE%AE/" style="font-size: 0.88rem;">http协议<sup>1</sup></a><a href="/tags/hyperos/" style="font-size: 0.88rem;">hyperos<sup>1</sup></a><a href="/tags/json/" style="font-size: 0.88rem;">json<sup>1</sup></a><a href="/tags/root/" style="font-size: 0.88rem;">root<sup>1</sup></a><a href="/tags/%E4%B8%80%E9%94%AEroot/" style="font-size: 0.88rem;">一键root<sup>1</sup></a><a href="/tags/%E5%B0%8F%E7%B1%B3/" style="font-size: 0.88rem;">小米<sup>1</sup></a><a href="/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/" style="font-size: 0.88rem;">性能测试<sup>2</sup></a><a href="/tags/%E8%BF%9C%E7%A8%8B%E5%88%B7%E6%9C%BA/" style="font-size: 0.88rem;">远程刷机<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button><button id="go-down" type="button" title="直达底部" onclick="anzhiyu.scrollToDest(document.body.scrollHeight, 500)"><i class="anzhiyufont anzhiyu-icon-arrow-down"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("02/20/2025 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2024 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 领创工作室 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("02/20/2025 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "";
+        img.title = "";
+        img.alt = "";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script async data-pjax src="/custom/imgloaded/imgloaded.js?1"></script><span id="fps"></span><link rel="stylesheet" href="/custom/fps/fps.css" media="defer" onload="this.media='all'"><script src="/custom/fps/fps.js"></script><script defer src="https://umami.xn--5brr03o.top/script.js" data-website-id="291d8c16-1fd0-4c8c-9b6b-a902b90f31fe"></script><script id="click-show-text" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/click-show-text.min.js" data-mobile="false" data-text="领创博客,欢迎你" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
