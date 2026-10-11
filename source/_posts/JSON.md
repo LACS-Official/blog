@@ -1,4 +1,4 @@
----
+﻿---
 cover: 'https://gitee.com/lacsgf/img/raw/master/webp/20250223223955420.webp'
 categories: 编程语法
 tags:
@@ -6,9 +6,9 @@ tags:
 date: '2025-02-23 00:00:00'
 catalog:
   - 编程语法
-permalink: json/
 title: JSON
 updated: '2025-02-24 10:19:00'
+abbrlink: 5d92c8f1
 ---
 
 JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，易于人阅读和编写，同时也易于机器解析和生成。以下是关于JSON的详细介绍：

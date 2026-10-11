@@ -1,4 +1,4 @@
----
+﻿---
 cover: ''
 categories: 玩机教程
 tags:
@@ -7,9 +7,9 @@ tags:
 date: '2025-02-23 22:53:00'
 catalog:
   - 玩机教程
-permalink: yijian_root
 title: 一键root
 updated: '2025-02-24 10:19:00'
+abbrlink: 956c9203
 ---
 
 ## 更新日志

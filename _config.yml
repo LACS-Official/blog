@@ -8,19 +8,22 @@
 # Site
 title: 领创博客 数码科技分享  # 网站标题，显示在浏览器标签和网站头部
 subtitle: '领创博客,LACS Blog'      # 网站副标题（当前为空）
-description: '分享刷机玩机心得，分享各种游戏攻略，分享各种生活琐事。'  # 网站描述，用于SEO
+description: '分享ai科技相关内容、刷机玩机心得，分享各种游戏攻略，分享各种生活琐事。'  # 网站描述，用于SEO
 keywords: '领创, 领创博客, 刷机, 玩机, 攻略, 生活'  # 网站关键词，用于SEO优化
 author: '领创工作室'  # 网站作者/所有者
 language: zh-CN    # 网站语言设置（简体中文）
-timezone: ''       # 时区设置，留空默认使用服务器时区
+timezone: 'Asia/Shanghai'       # 时区设置，留空默认使用服务器时区
 
 ##########################################
 # 网址链接配置
 ##########################################
 # URL
 ## 永久链接格式配置
-url: https://xn--9krq6q.xn--5brr03o.top/ # 网站主域名（需要替换为实际域名）
-permalink: /p/:title/  # 文章永久链接格式（年/月/日/标题）
+url: https://blog.lacs.cc/ # 网站主域名（需要替换为实际域名）
+permalink: /p/:abbrlink/  # 文章永久短链接 (hexo-abbrlink)
+abbrlink:
+  alg: crc32   # 算法：crc32 (8位)
+  rep: hex     # 进制：hex (十六进制)
 pretty_urls:
   trailing_index: false  # 是否在链接末尾保留index.html
   trailing_html: false   # 是否在链接末尾保留.html后缀
@@ -102,3 +105,37 @@ sitemap:
 #  theme: up
 #  wrong_pass_message: 抱歉, 这个密码看着不太对, 请再试试.
 #  wrong_hash_message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.
+
+##########################################
+# SEO 外部链接优化 (hexo-filter-nofollow)
+##########################################
+nofollow:
+  enable: true
+  field: site
+  exclude:
+    - 'lacs.cc'
+    - 'blog.lacs.cc'
+    - 'www.lacs.cc'
+    - 'appfun.lacs.cc'
+
+##########################################
+# 静态资源压缩 (hexo-neat)
+##########################################
+neat_enable: true
+neat_html:
+  enable: true
+  exclude:
+    - '**/*.xml'
+neat_css:
+  enable: true
+  exclude:
+    - '**/*.min.css'
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '**/*.min.js'
+    - '**/tw_cn.js'
+

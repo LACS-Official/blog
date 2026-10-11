@@ -1,4 +1,4 @@
----
+﻿---
 cover: ''
 categories: 网络交互
 tags:
@@ -6,9 +6,9 @@ tags:
 date: '2025-02-24 00:00:00'
 catalog:
   - 网络交互
-permalink: http-protocol-overview
 title: HTTP协议概述
 updated: '2025-02-24 10:19:00'
+abbrlink: a7099c2e
 ---
 
 WEB API接口 大都是基于 HTTP 协议的，所以，要进行接口测试 首先要了解 HTTP 协议 的 基础知识。

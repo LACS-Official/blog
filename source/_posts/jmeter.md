@@ -1,4 +1,4 @@
----
+﻿---
 cover: 'https://gitee.com/lacsgf/img/raw/master/20250222134956904.webp'
 categories: 性能测试
 tags:
@@ -6,9 +6,9 @@ tags:
 date: '2025-02-22 00:00:00'
 catalog:
   - 性能测试
-permalink: jmeter/
 title: jmeter
 updated: '2025-02-24 10:19:00'
+abbrlink: 808e762c
 ---
 
 # 1.JMeter的概述

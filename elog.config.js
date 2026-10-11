@@ -23,7 +23,7 @@ module.exports = {
       format: 'markdown',
       frontMatter: {
         enable: true,
-        include: ['catalog','categories', 'tags', 'title', 'date', 'updated', 'permalink', 'cover'],
+        include: ['catalog', 'categories', 'tags', 'title', 'date', 'updated', 'cover'],
         exclude: [], // 不输出exclude包含的属性
       }
     },

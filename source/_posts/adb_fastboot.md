@@ -1,4 +1,4 @@
----
+﻿---
 cover: 'https://gitee.com/lacsgf/img/raw/master/OIP-C.S8kbDtSRUlR60KgcDAbJogHaDU'
 categories: 玩机教程
 tags:
@@ -7,9 +7,9 @@ tags:
 date: '2025-02-23 00:00:00'
 catalog:
   - 玩机教程
-permalink: adb_fastboot/
 title: adb_fastboot
 updated: '2025-02-24 10:19:00'
+abbrlink: 8ddeff8d
 ---
 
 # ADB（Android Debug Bridge）相关

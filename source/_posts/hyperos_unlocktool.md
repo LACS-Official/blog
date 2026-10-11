@@ -1,4 +1,4 @@
----
+﻿---
 cover: ''
 categories: 玩机教程
 tags:
@@ -7,9 +7,9 @@ tags:
 date: '2025-02-23 00:00:00'
 catalog:
   - 玩机教程
-permalink: hyperos_unlocktool
 title: hyperos_unlocktool
 updated: '2025-02-24 10:19:00'
+abbrlink: b902eedc
 ---
 
 [embed](//player.bilibili.com/player.html?isOutside=true&aid=112895966841529&bvid=BV1TuiLezEYK&cid=500001636627370&p=1)

@@ -1,4 +1,4 @@
----
+﻿---
 cover: 'https://gitee.com/lacsgf/img/raw/master/20250222142133327.webp'
 categories: 性能测试
 tags:
@@ -6,9 +6,9 @@ tags:
 date: '2025-02-23 00:00:00'
 catalog:
   - 性能测试
-permalink: loadrunner/
 title: loadrunner
 updated: '2025-02-24 10:19:00'
+abbrlink: 80da20b3
 ---
 
 # 1. LoadRunner的概述
