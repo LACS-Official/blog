@@ -29,13 +29,8 @@ nav:
     - title: 网页
       item:
         - name: 博客
-          link: https://hexo.anheyu.com/
+          link: https://blog.lacs.cc/
           icon: /img/favicon.ico
-    - title: 项目
-      item:
-        - name: 安知鱼图床
-          link: https://image.anheyu.com/
-          icon: https://image.anheyu.com/favicon.ico
 
 # mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
 # 注意： 仅网站首页变灰，其他页面正常显示
@@ -284,12 +279,12 @@ post_pagination: 2
 
 # Displays outdated notice for a post (文章过期提醒)
 noticeOutdate:
-  enable: false
+  enable: true
   style: flat # style: simple/flat
-  limit_day: 365 # When will it be shown
+  limit_day: 180 # 超过180天（半年）未更新即提醒
   position: top # position: top/bottom
-  message_prev: It has been
-  message_next: days since the last update, the content of the article may be outdated.
+  message_prev: 本文最后更新于
+  message_next: 天前，文中的部分软件版本或操作方法可能已发生变动，请注意甄别并谨慎操作！
 
 # Share System (分享功能)
 # --------------------------------------
@@ -1020,7 +1015,7 @@ lazyload:
   enable: true
   field: site # site/post
   placeholder:
-  blur: true
+  blur: false
   progressive: true
 
 # PWA
@@ -1088,7 +1083,7 @@ friends_vue:
 
 # 深色模式粒子效果canvas
 universe:
-  enable: true
+  enable: false
 
 # 页面卡片顶部气泡升起效果
 bubble:

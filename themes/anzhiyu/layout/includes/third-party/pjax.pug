@@ -64,6 +64,9 @@ script.
     // baidu analytics
     typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
 
+    // umami analytics
+    typeof umami === 'object' && umami.track();
+
     typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
 
     // prismjs
