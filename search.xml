@@ -100,33 +100,6 @@
     
     
     <entry>
-      <title>hyperos_unlocktool</title>
-      <link href="//p/b902eedc/"/>
-      <url>//p/b902eedc/</url>
-      
-        <content type="html"><![CDATA[<p><a href="//player.bilibili.com/player.html?isOutside=true&aid=112895966841529&bvid=BV1TuiLezEYK&cid=500001636627370&p=1">embed</a></p><h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><ul><li>2025-01-12 12:00 <strong>V1.5</strong> 更新日志:<ol><li>更改整体编码为GB18030,更改bat代码逻辑，更改log和配置文件的读写</li><li></li></ol></li><li>2024-11-09 22:00 <strong>V1.5Beta</strong> 更新日志:<ol><li>重构使用逻辑，重构整体框架，采用重要功能单独脚本的整体框架结构</li><li>进软件后智能检测机型系统版本等信息，然后做出判断是否可以通过绕答题方式解锁手机</li><li>新增：退出脚本同时结束adb进程、7-zip解压内置重要资源</li></ol></li><li>2024-08-19 12:00 <strong>v1.4</strong> 更新日志：<ol><li>新增：设备管理器、usb3.0补丁、退出功能、初始化工具：自动检测驱动和手机信息</li><li>优化：界面显示效果、全盘搜索文件和移动文件逻辑</li><li>更改：精简部分代码、以管理员身份运行工具箱</li></ol></li><li>2024-08-09 19:00 <strong>v1.3</strong> 更新日志：<ol><li>新增：eveythingx86.exe、es输出日志</li><li>优化：全盘搜索文件整体逻辑、界面显示效果</li><li>更改：修复使用重启到fastboot会重启到fastbootd的问题 、取消对解锁工具屏蔽更新（屏蔽容易报错）</li></ol></li><li>2024-08-03 12:00 <strong>v1.2</strong> 更新日志：<ol><li>新增：工具提示和公告、安装设置前先检测设备是否连接、下载设置完成后工具全盘搜索设置文件然后移动到工具目录进行安装</li><li>优化：界面显示效果、子界面返回逻辑、输入选项错误逻辑、安装设置的整体逻辑</li><li>更改：取消下载直链——下载设置的方式更改为跳转浏览器自行下载</li></ol></li><li>2024-07-13 10:00 <strong>v1.1</strong> 更新日志：<ol><li>新增：更新日志功能、关于功能、屏蔽解锁工具更新</li><li>优化：界面显示效果</li><li>更改：集成报错详解于选项、解锁工具界面、汉化bypass脚本</li></ol></li></ul><h2 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h2><ul><li>V1.6<ol><li>可以更换主题</li></ol></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 玩机教程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> hyperos </tag>
-            
-            <tag> bl锁 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>adb_fastboot</title>
       <link href="//p/8ddeff8d/"/>
       <url>//p/8ddeff8d/</url>
@@ -146,31 +119,6 @@
             <tag> adb </tag>
             
             <tag> fastboot </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>xiaomi_usb</title>
-      <link href="//p/d1d9907a/"/>
-      <url>//p/d1d9907a/</url>
-      
-        <content type="html"><![CDATA[<h2 id="点我观看视频教程"><a href="#点我观看视频教程" class="headerlink" title="点我观看视频教程"></a><a href="https://www.bilibili.com/video/BV1TuiLezEYK/">点我观看视频教程</a></h2><ol><li>第一步</li><li>第二步</li><li>第三步</li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 玩机教程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 小米 </tag>
             
         </tags>
       
@@ -204,6 +152,31 @@
     
     
     <entry>
+      <title>xiaomi_usb</title>
+      <link href="//p/d1d9907a/"/>
+      <url>//p/d1d9907a/</url>
+      
+        <content type="html"><![CDATA[<h2 id="点我观看视频教程"><a href="#点我观看视频教程" class="headerlink" title="点我观看视频教程"></a><a href="https://www.bilibili.com/video/BV1TuiLezEYK/">点我观看视频教程</a></h2><ol><li>第一步</li><li>第二步</li><li>第三步</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 玩机教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 小米 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>远程刷机</title>
       <link href="//p/93d3cb9f/"/>
       <url>//p/93d3cb9f/</url>
@@ -221,6 +194,33 @@
         <tags>
             
             <tag> 远程刷机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hyperos_unlocktool</title>
+      <link href="//p/b902eedc/"/>
+      <url>//p/b902eedc/</url>
+      
+        <content type="html"><![CDATA[<p><a href="//player.bilibili.com/player.html?isOutside=true&aid=112895966841529&bvid=BV1TuiLezEYK&cid=500001636627370&p=1">embed</a></p><h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><ul><li>2025-01-12 12:00 <strong>V1.5</strong> 更新日志:<ol><li>更改整体编码为GB18030,更改bat代码逻辑，更改log和配置文件的读写</li><li></li></ol></li><li>2024-11-09 22:00 <strong>V1.5Beta</strong> 更新日志:<ol><li>重构使用逻辑，重构整体框架，采用重要功能单独脚本的整体框架结构</li><li>进软件后智能检测机型系统版本等信息，然后做出判断是否可以通过绕答题方式解锁手机</li><li>新增：退出脚本同时结束adb进程、7-zip解压内置重要资源</li></ol></li><li>2024-08-19 12:00 <strong>v1.4</strong> 更新日志：<ol><li>新增：设备管理器、usb3.0补丁、退出功能、初始化工具：自动检测驱动和手机信息</li><li>优化：界面显示效果、全盘搜索文件和移动文件逻辑</li><li>更改：精简部分代码、以管理员身份运行工具箱</li></ol></li><li>2024-08-09 19:00 <strong>v1.3</strong> 更新日志：<ol><li>新增：eveythingx86.exe、es输出日志</li><li>优化：全盘搜索文件整体逻辑、界面显示效果</li><li>更改：修复使用重启到fastboot会重启到fastbootd的问题 、取消对解锁工具屏蔽更新（屏蔽容易报错）</li></ol></li><li>2024-08-03 12:00 <strong>v1.2</strong> 更新日志：<ol><li>新增：工具提示和公告、安装设置前先检测设备是否连接、下载设置完成后工具全盘搜索设置文件然后移动到工具目录进行安装</li><li>优化：界面显示效果、子界面返回逻辑、输入选项错误逻辑、安装设置的整体逻辑</li><li>更改：取消下载直链——下载设置的方式更改为跳转浏览器自行下载</li></ol></li><li>2024-07-13 10:00 <strong>v1.1</strong> 更新日志：<ol><li>新增：更新日志功能、关于功能、屏蔽解锁工具更新</li><li>优化：界面显示效果</li><li>更改：集成报错详解于选项、解锁工具界面、汉化bypass脚本</li></ol></li></ul><h2 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h2><ul><li>V1.6<ol><li>可以更换主题</li></ol></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 玩机教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hyperos </tag>
+            
+            <tag> bl锁 </tag>
             
         </tags>
       
