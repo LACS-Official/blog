@@ -1,4 +1,4 @@
-var posts=["/p/a7099c2e/","/p/5d92c8f1/","/p/8ddeff8d/","/p/808e762c/","/p/80da20b3/","/p/d1d9907a/","/p/956c9203/","/p/9daba997/","/p/93d3cb9f/","/p/b902eedc/"];function toRandomPost(){
+var posts=["/p/5d92c8f1/","/p/a7099c2e/","/p/808e762c/","/p/b902eedc/","/p/d1d9907a/","/p/8ddeff8d/","/p/956c9203/","/p/80da20b3/","/p/9daba997/","/p/93d3cb9f/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };var friend_link_list=[{"name":"领创工作室官网","link":"https://www.lacs.cc/","avatar":"https://www.lacs.cc/favicon.ico","descr":"Lead And Create Studio 官方主站"},{"name":"软件资源网","link":"https://appfun.lacs.cc/","avatar":"https://appfun.lacs.cc/favicon.ico","descr":"实用工具、玩机软件资源分享站"},{"name":"安知鱼","link":"https://blog.anheyu.com/","avatar":"https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg","descr":"生活明朗，万物可爱。"}];
     var refreshNum = 1;
